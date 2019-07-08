@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['39.106.58.49', '127.0.0.1']
 
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
+    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
