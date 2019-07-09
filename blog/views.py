@@ -7,4 +7,4 @@ from blog.models import BlogPost
 def archive(request):
     # post = BlogPost(title='mocktitle', body='mockbody', timestamp=datetime.now())
     posts = BlogPost.objects.all()
-    return render_to_response('blog/archive.html', {'posts': posts)
+    return render_to_response('blog/archive.html', {'posts': posts})
