@@ -5,5 +5,6 @@ from blog.models import BlogPost
 
 # Create your views here.
 def archive(request):
-    post = BlogPost(title='mocktitle', body='mockbody', timestamp=datetime.now())
-    return render_to_response('blog/archive.html', {'posts': [post]})
+    # post = BlogPost(title='mocktitle', body='mockbody', timestamp=datetime.now())
+    posts = BlogPost.objects.all()
+    return render_to_response('blog/archive.html', {'posts': posts)
