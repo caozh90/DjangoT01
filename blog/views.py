@@ -9,7 +9,7 @@ from django.template import RequestContext
 def archive(request):
     # post = BlogPost(title='mocktitle', body='mockbody', timestamp=datetime.now())
     posts = BlogPost.objects.all()[:10]
-    return render_to_response('blog/archive.html', {'posts': posts}, RequestContext(request))
+    return render_to_response('blog/archive.html', {'posts': posts, }, RequestContext(request))
 
 
 def create_blogpost(request):
