@@ -14,7 +14,7 @@ def archive(request):
 
 
 def create_blogpost(request):
-    if request.method == 'post':
+    if request.method == 'POST':
         BlogPost(
             title=request.POST.get('title'),
             body=request.POST.get('body'),
