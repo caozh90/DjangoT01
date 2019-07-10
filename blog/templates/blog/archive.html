@@ -1,4 +1,4 @@
-<form action="/blog/create/" method="post">
+<form action="/blog/create/" method="post"> {% csrf_token %}
     Title:
     <input type="text" name="title"><br>
     Body:
