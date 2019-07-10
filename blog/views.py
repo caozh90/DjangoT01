@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from datetime import  datetime
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response,render
 from blog.models import BlogPost
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
@@ -9,7 +9,8 @@ from django.template import RequestContext
 def archive(request):
     # post = BlogPost(title='mocktitle', body='mockbody', timestamp=datetime.now())
     posts = BlogPost.objects.all()[:10]
-    return render_to_response('blog/archive.html', {'posts': posts, }, RequestContext(request))
+    # return render_to_response('blog/archive.html', {'posts': posts, }, RequestContext(request))
+    return render(request, 'blog/archive.html', {'posts': posts})
 
 
 def create_blogpost(request):
