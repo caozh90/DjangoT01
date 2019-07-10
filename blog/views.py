@@ -18,6 +18,6 @@ def create_blogpost(request):
         BlogPost(
             title=request.POST.get('title'),
             body=request.POST.get('body'),
-            timestampe=datetime.now(),
+            timestamp=datetime.now(),
         ).save()
     return HttpResponseRedirect('/blog/')
