@@ -22,5 +22,5 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
-    path('accounts/login/', auth_views.LoginView.as_view()),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
