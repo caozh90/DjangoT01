@@ -4,8 +4,10 @@ from django.shortcuts import render_to_response,render
 from blog.models import BlogPost
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
+from  django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def archive(request):
     # post = BlogPost(title='mocktitle', body='mockbody', timestamp=datetime.now())
     posts = BlogPost.objects.all()[:10]
